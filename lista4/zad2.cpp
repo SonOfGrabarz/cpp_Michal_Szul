@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 
 
 class Zespolona
@@ -56,8 +57,9 @@ public:
     Zespolona podziel(Zespolona c)
     {
         Zespolona podziel;
-        podziel.real = (real * c.real + imag * c.imag)/(c.real * c.real + c.imag * c.imag);
-        podziel.imag = (imag * c.real + real * c.imag)/(c.real * c.real + c.imag * c.imag);
+        double num = pow(c.real, 2) + pow(c.imag, 2);
+        podziel.real = ( real * c.real + imag * c.imag) / num;
+        podziel.imag = (real * (-c.imag) + imag * c.real) / num;
         return podziel;
 
     }
