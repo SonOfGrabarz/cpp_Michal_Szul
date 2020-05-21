@@ -22,6 +22,7 @@ public:
 private:
     enum { initial_capacity = 1 };      // sta³a wyliczeniowa
     void _grow();            // prywatna (!) funkcja s³u¿¹ca do rozszerzania stosu
+    void _shrink();
 
     size_t _capacity;        // rzeczywisty (= fizyczny) rozmiar tablicy
     size_t _size;            // pozorny (= logiczny) rozmiar tablicy
